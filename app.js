@@ -1,8 +1,11 @@
-function enviarSaludo(){
-    let nombre = document.getElementById("nombre");
-    let apellido = document.getElementById("apellido");
-    let saludo = document.querySelector("#saludo");
-    let texto = "hola " + nombre.value + " "+ apellido.value +", gracias por rellenar el formulario";
-    
-    saludo.innerHTML= texto;
+let formulario = document.getElementById ("form")
+
+formulario.addEventListener('submit', datosForm)
+
+function datosForm(e){
+    e.preventDefault();
+    let datos = e.target
+    console.log(datos.children[0].value)
+    console.log(datos.children[1].value)
+
 }
